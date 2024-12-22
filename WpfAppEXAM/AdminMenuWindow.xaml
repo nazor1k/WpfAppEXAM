@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfAppEXAM.AdminMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppEXAM"
+        mc:Ignorable="d"
+        Title="Admin Menu" Height="520" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <DataGrid x:Name="TableDataGrid" Height="300" Margin="0,0,0,10"/>
+            <Label FontSize="30">Add Table</Label>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label FontSize="20">Seats:</Label>
+                    <TextBox x:Name="SeatsInput" Width="100" Margin="10" FontSize="20"/>
+                <Label FontSize="20">Description:</Label>
+                <TextBox x:Name="DescriptionInput" Width="200" Margin="10" FontSize="20"/>
+
+                <Button Content="Add" Click="AddTable_Click"  Margin="5,10" FontSize="20"/>
+                <Button Content="Edit" Click="EditTable_Click"  Margin="5,10" FontSize="20"/>
+                <Button Content="Delete" Click="DeleteTable_Click"  Margin="5,10" FontSize="20"/>
+            </StackPanel>
+
+            <Button Content="View Reservations" Click="ViewReservations_Click" FontSize="30"/>
+            
+        </StackPanel>
+    </Grid>
+</Window>

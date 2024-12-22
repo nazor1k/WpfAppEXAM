@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfAppEXAM.ClientTableBookerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppEXAM"
+        mc:Ignorable="d"
+        Title="ClientTableBookerWindow" Height="700" Width="800" Loaded="Window_Loaded">
+    <Grid>
+       
+        <DataGrid Name="TableDataGrid" AutoGenerateColumns="False" Height="200" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Опис" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Місця" Binding="{Binding Seats}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0,210,0,0">
+            <Label Content="Кількість місць:" VerticalAlignment="Center"/>
+            <TextBox Name="FilterSeatsInput" Width="50" Margin="5,0,10,0"/>
+            <!--<Label Content="Час:" VerticalAlignment="Center"/>
+            <TextBox Name="FilterTimeInput" Width="100" Margin="5,0,10,0"/>-->
+            <Button Name="ApplyFiltersButton" Content="Застосувати" Click="ApplyFilters_Click"/>
+        </StackPanel>
+
+        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="0,250,0,0">
+            <TextBlock Text="Дата початку:" Margin="10"/>
+            <DatePicker Name="DateFromPicker" Width="200" Margin="10"/>
+            <TextBlock Text="Час початку (HH:MM:SS):" Margin="10"/>
+            <TextBox Name="TimeFromPicker" Width="200"  Margin="10"/>
+
+            <TextBlock Text="Дата завершення:" Margin="10"/>
+            <DatePicker Name="DateToPicker" Width="200" Margin="10"/>
+            <TextBlock Text="Час завершення (HH:MM:SS):" Margin="10"/>
+            <TextBox Name="TimeToPicker" Width="200"  Margin="10"/>
+
+            <Button Name="CreateReservationButton" Content="Забронювати" Click="CreateReservation_Click" Margin="10"/>
+            <!--<Button Name="CancelReservationButton" Content="Скасувати" Click="CancelReservation_Click" Margin="10"/>-->
+            <Button Name="MyReservationsButton" Content="Мої бронювання" Click="MyReservationsButton_Click" Margin="10"/>
+
+        </StackPanel>
+
+        
+        
+    </Grid>
+</Window>

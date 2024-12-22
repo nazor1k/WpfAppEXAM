@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppEXAM.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppEXAM"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="350" Width="600">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Login" />
+            <TextBox Name="Login"></TextBox>
+            <Label Content="Name" />
+            <TextBox Name="Name"></TextBox>
+
+            <Label Content="Password" />
+            <PasswordBox Name="Password"></PasswordBox>
+            <Label Content="Password repeat" />
+            <PasswordBox Name="Password_Repeat"></PasswordBox>
+
+            <Label Content="Role:" />
+
+            <CheckBox Name="IsAdminCheckBox">Is Admin</CheckBox>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="0 10" Name="RegistrationBut" Width="100" Height="30" Content="Зареєструватись"   VerticalAlignment="Top" Click="RegistrationBut_ClickAsync" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
